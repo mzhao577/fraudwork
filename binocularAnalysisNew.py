@@ -4,6 +4,10 @@ import math
 import os
 import sys
 
+# Force Hugging Face to load models from local cache only (no API calls)
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
+os.environ["HF_HUB_OFFLINE"] = "1"
+
 sys.path.insert(0, os.path.expanduser("~/MaxWork/frauddetection/maxBinoculars"))
 from binoculars import Binoculars
 
